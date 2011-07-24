@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macromedia-extension
+    name="MODX CMP Library"
+    version="0.0.1"
+    type="library"
+    requires-restart="false"
+    locked="false"
+    pkgtype="mxp">
+
+    <author name="Romain Tripault" />
+
+    <products>
+        <product name="Fireworks" version="11.1" primary="true" />
+    </products>
+
+    <update  />
+    <!--<update method="directlink" url="http://johndunning.com/fireworks/version/Tables" />-->
+
+    <description>
+    <![CDATA[
+    Quickly build MODX CMP prototypes with Adobe Fireworks.
+    ]]>
+    </description>
+
+    <ui-access>
+    <![CDATA[
+        <h2>Some HTML data</h2>
+        <p>Here is an introduction</p>
+    ]]>
+    </ui-access>
+
+    <license-agreement>
+    </license-agreement>
+
+    <files>
+        <file source="btn.graphic.png" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/btn.graphic.png" file-type="ordinary" />
+        <file source="btn.jsf" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/btn.jsf" file-type="ordinary" />
+    </files>
+
+    <configuration-changes>
+    </configuration-changes>
+    <signatures />
+
+</macromedia-extension>
