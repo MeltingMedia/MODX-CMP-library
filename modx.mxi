@@ -3,7 +3,7 @@
     name="MODX CMP Library"
     version="0.0.1"
     type="library"
-    requires-restart="false"
+    requires-restart="true"
     locked="false"
     pkgtype="mxp">
 
@@ -39,6 +39,10 @@
 
     <configuration-changes>
     </configuration-changes>
+
+    <file-tokens>
+        <!--<token name="pdfdocs" prompt="PDF Documentation" definition="C:\" />-->
+    </file-tokens>
     <signatures />
 
 </macromedia-extension>
