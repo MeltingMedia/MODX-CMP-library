@@ -1,37 +1,46 @@
-function setDefaultValues()
-{
+function setDefaultValues() {
     var values = new Array();
 
-    //values.push({ name:"Label", type:"text", value:"" });
     values.push({ name:"State", type:"ComboBox", value:"Normal,Normal,Over,Press,Disabled"});
+    values.push({ name:"Type", type:"ComboBox", value:"Empty,Empty,First,First disabled,Previous,Previous disabled,Refresh,Next,Next disabled,Last,Last disabled"});
 
     Widget.elem.customData["currentValues"] = values;
 }
 
-function applyCurrentValues()
-{
+function applyCurrentValues() {
     var values = Widget.elem.customData["currentValues"];
 
-    //Widget.GetObjectByName("Label").textChars = values[0].value;
-    
-    //var state = values[1].value.split(",")[0];
     var state = values[0].value.split(",")[0];
-    
     Widget.GetObjectByName("normal").visible = (state=="Normal");
     Widget.GetObjectByName("over").visible = (state=="Over");
     Widget.GetObjectByName("press").visible = (state=="Press");
     Widget.GetObjectByName("disabled").visible = (state=="Disabled");
 
-    /*if (state=="Disabled"){
-    Widget.GetObjectByName("disabled").visible = (state=="Disabled");
-    Widget.GetObjectByName("Label").pathAttributes.fillColor = "#a8a8b2";}
-    else{
-    Widget.GetObjectByName("Label").pathAttributes.fillColor = "#535353";
-    }*/
+    var type = values[1].value.split(",")[0];
+    Widget.GetObjectByName("first").visible = (type=="First");
+    Widget.GetObjectByName("first-disabled").visible = (type=="First disabled");
+    Widget.GetObjectByName("previous").visible = (type=="Previous");
+    Widget.GetObjectByName("previous-disabled").visible = (type=="Previous disabled");
+    Widget.GetObjectByName("refresh").visible = (type=="Refresh");
+    Widget.GetObjectByName("next").visible = (type=="Next");
+    Widget.GetObjectByName("next-disabled").visible = (type=="Next disabled");
+    Widget.GetObjectByName("last").visible = (type=="Last");
+    Widget.GetObjectByName("last-disabled").visible = (type=="Last disabled");
+
+    if (type=="Empty") {
+        Widget.GetObjectByName("first").visible = false;
+        Widget.GetObjectByName("first-disabled").visible = false;
+        Widget.GetObjectByName("previous").visible = false;
+        Widget.GetObjectByName("previous-disabled").visible = false;
+        Widget.GetObjectByName("refresh").visible = false;
+        Widget.GetObjectByName("next").visible = false;
+        Widget.GetObjectByName("next-disabled").visible = false;
+        Widget.GetObjectByName("last").visible = false;
+        Widget.GetObjectByName("last-disabled").visible = false;
+    }
 }
 
-switch (Widget.opCode)
-{
+switch (Widget.opCode) {
     case 1: setDefaultValues();   break;
     case 2: applyCurrentValues(); break;
 }

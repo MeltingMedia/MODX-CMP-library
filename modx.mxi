@@ -35,6 +35,10 @@
     <files>
         <file source="btn.graphic.png" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/btn.graphic.png" file-type="ordinary" />
         <file source="btn.jsf" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/btn.jsf" file-type="ordinary" />
+        <file source="form-layout.graphic.png" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/form-layout.graphic.png" file-type="ordinary" />
+        <file source="form-layout.jsf" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/form-layout.jsf" file-type="ordinary" />
+        <file source="tab.graphic.png" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/tab.graphic.png" file-type="ordinary" />
+        <file source="tab.jsf" destination="$fireworks/Configuration/Common Library/MODX-ExtJS/tab.jsf" file-type="ordinary" />
     </files>
 
     <configuration-changes>
